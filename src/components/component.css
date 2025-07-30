@@ -1,0 +1,209 @@
+.phone-input-container {
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
+  padding: 7px;
+}
+
+.form-container {
+  border: 1px solid gray;
+  padding: 7px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.country-dropdown {
+  position: relative;
+  width: 30%;
+}
+
+.dropdown-input-container {
+  position: relative;
+  height: 100%;
+}
+
+.dropdown-input,
+.phone-number-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.phone-number-container {
+  flex-grow: 1;
+}
+
+.dropdown-input:focus,
+.phone-number-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.selected-country {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.selected-flag {
+  width: 24px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.selected-code {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.selected-country .dropdown-arrow {
+  position: static;
+  transform: none;
+  margin-left: auto;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 5px;
+  min-width: 280px;
+}
+
+.dropdown-no-results {
+  padding: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.dropdown-option {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f5f5f5;
+}
+
+.option-flag {
+  width: 24px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.option-name {
+  font-weight: 500;
+  margin-right: 10px;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.error-message {
+  text-align: left;
+  color: rgb(219, 41, 41);
+  position: absolute;
+}
+.option-code {
+  color: #777;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.submit-button {
+  margin-top: 3rem;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  height: 30px;
+  cursor: pointer;
+  background-color: white;
+  &:hover {
+    background-color: rgb(236, 236, 236);
+  }
+}
+
+.dropdown-search-container {
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+.dropdown-search-input {
+  width: 90%;
+
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 0px 8px;
+  height: 30px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+  &:focus {
+    outline: 1px solid rgb(103, 103, 255);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .phone-input-container {
+    gap: 8px;
+  }
+
+  .country-dropdown {
+    width: 25%;
+  }
+  .phone-number-container {
+    width: 75%;
+    .phone-number-input {
+      width: 100%;
+    }
+  }
+
+  .selected-country {
+    padding: 6px;
+  }
+  .selected-country {
+    font-size: 12px;
+    .selected-flag {
+      height: 13px;
+      width: 17px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .dropdown-arrow {
+    display: none;
+  }
+}

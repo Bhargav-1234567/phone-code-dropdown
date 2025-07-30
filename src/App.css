@@ -27,7 +27,10 @@
 .App-link {
   color: #61dafb;
 }
-
+option {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
+    sans-serif;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
